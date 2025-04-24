@@ -15,6 +15,14 @@ import { UserModule } from 'src/apis/users/user.module';
 import { CommonModule } from 'src/common/common.module';
 import { ProfilesModule } from 'src/apis/profiles/profiles.module';
 import { ProfilesControllerAdmin } from 'src/apis/profiles/controllers/profiles.controller.admin';
+import { PaymentModule } from 'src/apis/payment/payment.module';
+import { PaymentControllerAdmin } from 'src/apis/payment/controllers/payment.controller.admin';
+import { CreditsModule } from 'src/apis/credits/credits.module';
+import { CreditsControllerAdmin } from 'src/apis/credits/controllers/credits.controller.admin';
+import { GradesModule } from 'src/apis/grades/grades.module';
+import { GradesControllerAdmin } from 'src/apis/grades/controllers/grades.controller.admin';
+import { CohortsModule } from 'src/apis/cohorts/cohorts.module';
+import { CohortsControllerAdmin } from 'src/apis/cohorts/controllers/cohorts.controller.admin';
 
 @Module({
     imports: [
@@ -27,6 +35,10 @@ import { ProfilesControllerAdmin } from 'src/apis/profiles/controllers/profiles.
         PostsModule,
         MetadataModule,
         ProfilesModule,
+        PaymentModule,
+        CreditsModule,
+        GradesModule,
+        CohortsModule,
     ],
     controllers: [
         MediaControllerAdmin,
@@ -36,6 +48,10 @@ import { ProfilesControllerAdmin } from 'src/apis/profiles/controllers/profiles.
         MetadataControllerAdmin,
         UserControllerAdmin,
         ProfilesControllerAdmin,
+        PaymentControllerAdmin,
+        CreditsControllerAdmin,
+        GradesControllerAdmin,
+        CohortsControllerAdmin,
     ],
     providers: [],
 })

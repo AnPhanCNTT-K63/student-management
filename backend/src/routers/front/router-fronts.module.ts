@@ -14,6 +14,14 @@ import { PostsController } from 'src/apis/posts/controllers/posts.controller';
 import { UserController } from 'src/apis/users/controllers/user.controller';
 import { ProfilesModule } from 'src/apis/profiles/profiles.module';
 import { ProfilesController } from 'src/apis/profiles/controllers/profiles.controller';
+import { PaymentModule } from 'src/apis/payment/payment.module';
+import { PaymentController } from 'src/apis/payment/controllers/payment.controller';
+import { CreditsModule } from 'src/apis/credits/credits.module';
+import { CreditsController } from 'src/apis/credits/controllers/credits.controller';
+import { GradesModule } from 'src/apis/grades/grades.module';
+import { GradesController } from 'src/apis/grades/controllers/grades.controller';
+import { CohortsModule } from 'src/apis/cohorts/cohorts.module';
+import { CohortsController } from 'src/apis/cohorts/controllers/cohorts.controller';
 
 @Module({
     imports: [
@@ -25,6 +33,10 @@ import { ProfilesController } from 'src/apis/profiles/controllers/profiles.contr
         PostsModule,
         MetadataModule,
         ProfilesModule,
+        PaymentModule,
+        CreditsModule,
+        GradesModule,
+        CohortsModule,
     ],
     controllers: [
         UserController,
@@ -34,6 +46,10 @@ import { ProfilesController } from 'src/apis/profiles/controllers/profiles.contr
         PostsController,
         MetadataController,
         ProfilesController,
+        PaymentController,
+        CreditsController,
+        GradesController,
+        CohortsController,
     ],
     providers: [],
 })

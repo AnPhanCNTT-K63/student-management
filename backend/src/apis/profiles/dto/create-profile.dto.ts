@@ -1,12 +1,18 @@
 import { SuperApiProperty } from '@libs/super-core/decorators/super-api-property.decorator';
 import { IsString } from 'class-validator';
+import { Types } from 'mongoose';
 
 export class CreateProfileDto {
     @SuperApiProperty({
         type: String,
         required: false,
-        title: 'FirstName',
-        description: 'FirstName of user',
+    })
+    @IsString()
+    code: string;
+
+    @SuperApiProperty({
+        type: String,
+        required: false,
     })
     @IsString()
     firstName: string;
@@ -14,8 +20,6 @@ export class CreateProfileDto {
     @SuperApiProperty({
         type: String,
         required: false,
-        title: 'LastName',
-        description: 'Lastname of user',
     })
     @IsString()
     lasName: string;
@@ -23,8 +27,6 @@ export class CreateProfileDto {
     @SuperApiProperty({
         type: String,
         required: false,
-        title: 'phone',
-        description: 'phone of user',
     })
     @IsString()
     phone: string;
@@ -32,9 +34,36 @@ export class CreateProfileDto {
     @SuperApiProperty({
         type: String,
         required: false,
-        title: 'Adress',
-        description: 'Address of user',
     })
     @IsString()
     address: string;
+
+    @SuperApiProperty({
+        type: String,
+        required: false,
+    })
+    @IsString()
+    city: string;
+
+    @SuperApiProperty({
+        type: String,
+        required: false,
+    })
+    @IsString()
+    province: string;
+
+    @SuperApiProperty({
+        type: String,
+        required: false,
+    })
+    @IsString()
+    ward: string;
+
+    @SuperApiProperty({
+        type: Types.ObjectId,
+        required: false,
+        default: '667a5598731a524b19865ea1',
+    })
+    @IsString()
+    grade: Types.ObjectId;
 }

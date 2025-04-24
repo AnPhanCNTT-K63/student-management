@@ -2,8 +2,6 @@ import { SuperProp } from '@libs/super-core';
 import { AutoPopulate } from '@libs/super-search';
 import { Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types } from 'mongoose';
-import { Grade } from 'src/apis/grades/entities/grade.entity';
-import { File } from 'src/apis/media/entities/files.entity';
 import { User } from 'src/apis/users/entities/user.entity';
 import { AggregateRoot } from 'src/base/entities/aggregate-root.schema';
 import { COLLECTION_NAMES } from 'src/constants';
@@ -11,77 +9,68 @@ import autopopulateSoftDelete from 'src/utils/mongoose-plugins/autopopulate-soft
 
 @Schema({
     timestamps: true,
-    collection: COLLECTION_NAMES.PROFILE,
+    collection: COLLECTION_NAMES.TRANSACTION,
 })
-export class Profile extends AggregateRoot {
+export class Transaction extends AggregateRoot {
     @SuperProp({
         type: String,
-        required: false,
     })
-    code: string;
+    txnRef: string;
 
     @SuperProp({
-        type: String,
-        required: false,
+        type: Number,
     })
-    firstName: string;
+    amount: string;
 
     @SuperProp({
         type: String,
-        required: false,
     })
-    lastName: string;
+    bankCode: string;
 
     @SuperProp({
         type: String,
-        required: false,
     })
-    phone: string;
+    bankTranNo: string;
 
     @SuperProp({
         type: String,
-        required: false,
     })
-    address: string;
+    cardType: string;
 
     @SuperProp({
         type: String,
-        required: false,
     })
-    city: string;
+    orderInfo: string;
 
     @SuperProp({
         type: String,
-        required: false,
     })
-    province: string;
+    payDate: string;
 
     @SuperProp({
         type: String,
-        required: false,
     })
-    ward: string;
+    responseCode: string;
 
     @SuperProp({
-        type: Types.ObjectId,
-        ref: COLLECTION_NAMES.FILE,
-        refClass: File,
-        required: false,
+        type: String,
     })
-    @AutoPopulate({
-        ref: COLLECTION_NAMES.FILE,
-    })
-    avatar: Types.ObjectId;
+    transactionNo: string;
 
     @SuperProp({
-        type: Types.ObjectId,
-        ref: COLLECTION_NAMES.GRADE,
-        refClass: Grade,
+        type: String,
     })
-    @AutoPopulate({
-        ref: COLLECTION_NAMES.GRADE,
+    transactionStatus: string;
+
+    @SuperProp({
+        type: String,
     })
-    grade: Types.ObjectId;
+    secureHash: string;
+
+    @SuperProp({
+        type: String,
+    })
+    status: string;
 
     @SuperProp({
         type: Types.ObjectId,
@@ -93,6 +82,6 @@ export class Profile extends AggregateRoot {
     })
     createdBy: Types.ObjectId;
 }
-export type ProfileDocument = Profile & Document;
-export const ProfileSchema = SchemaFactory.createForClass(Profile);
-ProfileSchema.plugin(autopopulateSoftDelete);
+export type TransactionDocument = Transaction & Document;
+export const TransactionSchema = SchemaFactory.createForClass(Transaction);
+TransactionSchema.plugin(autopopulateSoftDelete);

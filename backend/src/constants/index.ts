@@ -22,6 +22,10 @@ export enum COLLECTION_NAMES {
     USER_REFERRAL = 'userReferrals',
     PAGE = 'pages',
     PROFILE = 'profiles',
+    TRANSACTION = 'transactions',
+    CREDIT = 'credits',
+    GRADE = 'grades',
+    COHORT = 'cohorts',
 }
 
 export enum CountryCode {

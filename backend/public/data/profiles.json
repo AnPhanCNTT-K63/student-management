@@ -1,0 +1,37 @@
+[
+    {
+        "_id": {
+            "$oid": "6809c21a9a5b169cb672f2b0"
+        },
+        "createdBy": {
+            "$oid": "667a4598531a324b19865ea0"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "6809c21a9a5b169cb672f2b1"
+        },
+        "createdBy": {
+            "$oid": "667a4598531a324b19865ea1"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "6809c21a9a5b169cb672f2b2"
+        },
+        "code": "6351071001",
+        "firstName": "An",
+        "lastName": "Phan Đức",
+        "phone": "0343811543",
+        "address": "145/18 Thành Thái, phường Quang Trung, Thành phố Quy Nhơn, Tỉnh Bình Định",
+        "city": "Quy Nhơn",
+        "province": "Bình Định",
+        "ward": "Quang Trung",
+        "grade": {
+            "$oid": "667a5598731a524b19865ea1"
+        },
+        "createdBy": {
+            "$oid": "667a4598531a324b19865ea2"
+        }
+    }
+]

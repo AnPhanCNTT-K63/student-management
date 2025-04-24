@@ -8,6 +8,9 @@
         "password": "$2a$10$wbLPgDAJ3oTmQAiigDQwFe8rm.Mw7qLhhcD1uUHWTEg3yuhKLwaBC",
         "role": {
             "$oid": "667940bbf2b6c4781339f664"
+        },
+        "profile": {
+            "$oid": "6809c21a9a5b169cb672f2b0"
         }
     },
     {
@@ -19,6 +22,23 @@
         "password": "$2a$10$wbLPgDAJ3oTmQAiigDQwFe8rm.Mw7qLhhcD1uUHWTEg3yuhKLwaBC",
         "role": {
             "$oid": "667b7b83462a35d0fbe5d251"
+        },
+        "profile": {
+            "$oid": "6809c21a9a5b169cb672f2b1"
+        }
+    },
+    {
+        "_id": {
+            "$oid": "667a4598531a324b19865ea2"
+        },
+        "name": "Phan Đức An",
+        "email": "6351071001@st.utc2.edu.vn ",
+        "password": "$2b$10$1iKHP08WmE28Lm9WnJ0BG.6NINFWX4wv8OA7/4gTaB99vwsKrmWGe",
+        "role": {
+            "$oid": "667b7b83462a35d0fbe5d251"
+        },
+        "profile": {
+            "$oid": "6809c21a9a5b169cb672f2b2"
         }
     }
 ]

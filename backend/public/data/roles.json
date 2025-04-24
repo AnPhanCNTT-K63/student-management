@@ -16,6 +16,21 @@
     },
     {
         "_id": {
+            "$oid": "667940bbf2b6c4781339f123"
+        },
+        "deletedAt": null,
+        "name": "Lecturer",
+        "type": 10,
+        "__v": 0,
+        "createdAt": {
+            "$date": "2024-06-26T04:28:00.142Z"
+        },
+        "updatedAt": {
+            "$date": "2024-06-26T04:28:00.142Z"
+        }
+    },
+    {
+        "_id": {
             "$oid": "667b7b83462a35d0fbe5d251"
         },
         "deletedAt": null,
